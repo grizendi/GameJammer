@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _rotateSpeed = 10f;
 
     private Rigidbody _rigidBody;
+    private Weapon _weapon;
     private float _horizontalInput = 0f;
     private float _verticalInput = 0f;
     private bool _fireInput = false;
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody>();
         _rigidBody.useGravity = false;
+
+        _weapon = GetComponent<Weapon>();
     }
 
 
@@ -33,15 +36,27 @@ public class Player : MonoBehaviour
     {
         _horizontalInput = Input.GetAxis("Horizontal_P" + _playerNumber);
         _verticalInput = Input.GetAxis("Vertical_P" + _playerNumber);
-        _fireInput = Input.GetButtonDown("Fire1_P" + _playerNumber);
 
+        CheckForFireInput();
 
+    }
+
+    private void CheckForFireInput()
+    {
+        _fireInput = Input.GetButton("Fire1_P" + _playerNumber);
+
+        if (_fireInput)
+        {
+            _weapon.TryFire();
+            Debug.Log(_fireInput);
+        }
     }
 
     private void FixedUpdate()
     {
         ThrustForward();
         Rotate();
+       
     }
 
     private void Rotate()
