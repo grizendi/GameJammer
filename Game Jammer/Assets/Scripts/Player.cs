@@ -17,46 +17,53 @@ public class Player : MonoBehaviour
     [Tooltip("Rotate speed")]
     [SerializeField] private float _rotateSpeed = 10f;
 
-    private Rigidbody _rigidBody;
+    private Rigidbody _rigidbody;
     private Weapon _weapon;
     private float _horizontalInput = 0f;
     private float _verticalInput = 0f;
     private bool _fireInput = false;
 
-    private string[] _joystickNames;
 
     private void Start()
     {
-        _rigidBody = GetComponent<Rigidbody>();
-        _rigidBody.useGravity = false;
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.useGravity = false;
 
         _weapon = GetComponent<Weapon>();
 
-        _joystickNames = Input.GetJoystickNames();
     }
 
 
     private void Update()
     {
-        _horizontalInput = Input.GetAxis("Horizontal_P" + _playerNumber);
-        _verticalInput = Input.GetAxis("Vertical_P" + _playerNumber);
+        var inputDevice = (InputManager.Devices.Count > (_playerNumber - 1)) ? InputManager.Devices[_playerNumber - 1] : null;
 
-        CheckForFireInput();
-
-       
-        
+        if (inputDevice == null)
+        {
+            Debug.LogError("No controller is attached for player " + _playerNumber);
+        }
+        else
+        {
+            ProcessInput(inputDevice);
+        }
 
     }
 
-    private void CheckForFireInput()
+    private void ProcessInput(InputDevice inputDevice)
     {
-        _fireInput = Input.GetButton("Fire1_P" + _playerNumber);
+        //movement input
+        _horizontalInput = inputDevice.Direction.X;
+        _verticalInput = inputDevice.Direction.Y;
+
+        _fireInput = inputDevice.Action1;
 
         if (_fireInput)
         {
             _weapon.TryFire();
         }
+
     }
+
 
     private void FixedUpdate()
     {
@@ -69,11 +76,10 @@ public class Player : MonoBehaviour
     {
         transform.Rotate(0f, _horizontalInput * _rotateSpeed, 0f);
 
-
     }
 
     private void ThrustForward()
     {
-        _rigidBody.velocity = transform.forward * _forwardSpeed;
+        _rigidbody.velocity = transform.forward * _forwardSpeed;
     }
 }
