@@ -6,6 +6,9 @@ public class MachineGun : MonoBehaviour
 {
     [SerializeField] protected GameObject _bullet;      // the projectile fired
     [SerializeField] private float _shotCooldown = 0.25f;       // time between shots 
+    [SerializeField] GameObject _muzzleflash;                   // spawns particle
+    [SerializeField] private float _muzzleFlashParticlesDuration = 0.5f;
+  
 
     private float _lastshotTime; // the time from last shot
 
@@ -22,6 +25,9 @@ public class MachineGun : MonoBehaviour
     // fire the weapon
     protected virtual void Fire()
     {
+        Destroy(Instantiate(_muzzleflash, transform.position, transform.rotation), _muzzleFlashParticlesDuration);
         Instantiate(_bullet, transform.position, transform.rotation);
+       
+        
     }
 }
