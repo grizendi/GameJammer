@@ -103,11 +103,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5113058552321352129}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 05e32e3efe3748a4f9ace7c84fb0772e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
 --- !u!114 &1057273624
+=======
+  m_Script: {fileID: 11500000, guid: 7033b1792f9711545945164a34b35812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 3
+  _scoreValue: 0
+--- !u!114 &4193364529482094067
+>>>>>>> 55972c94f28dc80a95294f5a873ed03c24720b39
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +125,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5113058552321352129}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 7033b1792f9711545945164a34b35812, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 05e32e3efe3748a4f9ace7c84fb0772e, type: 3}
+>>>>>>> 55972c94f28dc80a95294f5a873ed03c24720b39
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 3
