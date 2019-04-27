@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3178668264280671026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: airplanefinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3178668264280671028}
   - component: {fileID: 3178668264284062480}
   - component: {fileID: 3178668264282964432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3178668264284062482}
   - component: {fileID: 3178668264282964434}
   - component: {fileID: 1164268637344829412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: propeller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3794301211999956551}
   - component: {fileID: 3794301211999956550}
   - component: {fileID: 2320722814496786580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
