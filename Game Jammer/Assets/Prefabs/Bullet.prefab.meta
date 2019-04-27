@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Game Jammer/Assets/Prefabs/Cube.prefab.meta
+guid: 7eed574a60e6847aeb21f1df207d8efe
+=======
 guid: b768d1803597cb8438a4fffa685c0a4c
+>>>>>>> e10912fc5ba429a45c3b668e2149e6ade6323dc1:Game Jammer/Assets/Prefabs/Bullet.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
