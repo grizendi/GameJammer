@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
         if (_fireInput)
         {
             _weapon.TryFire();
-            Debug.Log(_fireInput);
         }
     }
 
