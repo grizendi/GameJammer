@@ -128,8 +128,6 @@ public class Player : MonoBehaviour
          if(_canRotate)
         transform.Rotate(0f, _horizontalInput * _rotateSpeed, 0f);
 
-      
-
     }
 
     private void ThrustForward()
