@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 2014151898373431094}
   - component: {fileID: 1779504652}
   - component: {fileID: 1779504651}
-  - component: {fileID: 8380328167457024532}
   - component: {fileID: 8214457860790628429}
+  - component: {fileID: 8101862738229852861}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,20 +126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _velocity: 50
   _lifeTime: 10
---- !u!114 &8380328167457024532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014151898373431095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbcf2779d449d0439bd4450c19d1fbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _velocity: 40
-  _lifetime: 2
 --- !u!114 &8214457860790628429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +139,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+--- !u!114 &8101862738229852861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014151898373431095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7033b1792f9711545945164a34b35812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 1
+  _deathParticles: {fileID: 0}
+  _deathParticlesDuration: 0
+  _scoreValue: 0
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &5777217246457502782
 PrefabInstance:
   m_ObjectHideFlags: 0
