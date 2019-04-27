@@ -61,8 +61,8 @@ MonoBehaviour:
   _forwardSpeed: 10
   _rotateSpeed: 5
   _boostCooldown: 1
-  _boostPower: 12
-  _boostDuration: 0.5
+  _boostPower: 10
+  _boostDuration: 0.4
 --- !u!54 &7900935903667864565
 Rigidbody:
   m_ObjectHideFlags: 0
