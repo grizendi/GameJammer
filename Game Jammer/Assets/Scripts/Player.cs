@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,16 +8,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int _playerNumber = 1;
+    [SerializeField] private float _forwardSpeed = 10f;
 
     private Rigidbody _rigidBody;
     private float _horizontalInput = 0f;
     private float _verticalInput = 0f;
 
-
     private void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
-    
+        _rigidBody.useGravity = false;
     }
 
 
@@ -29,10 +30,11 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-   
+        ThrustForward();
     }
 
-
-
-
+    private void ThrustForward()
+    {
+        _rigidBody.velocity = transform.forward * _forwardSpeed;
+    }
 }
