@@ -37,7 +37,9 @@ public class Player : MonoBehaviour
     private bool _boostInput = false;
     private float _lastBoostTime = 0f;
     private float _boostMultiplier = 1f;
-    
+
+    [SerializeField] SOInterger _PlayersSpawned;            // counts the ammount of players that have spawned on the screen
+
 
     private bool _canRotate = true;
 
@@ -131,5 +133,15 @@ public class Player : MonoBehaviour
     private void ThrustForward()
     {
         _rigidbody.velocity = transform.forward * _forwardSpeed * _boostMultiplier;
+    }
+
+    private void Awake()
+    {
+        _PlayersSpawned.value++;                         // if a ghost spawns add to the _ghostspawned value 
+    }
+
+    private void OnDisable()
+    {
+        _PlayersSpawned.value--;                           // if a ghost is destroyed, lowers the value of _ghostspawned
     }
 }
