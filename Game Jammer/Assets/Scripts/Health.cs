@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int _currentHealth = 3;                // our current health
     [SerializeField] private GameObject _deathParticles;            // gameObject to spawn on death
-    [SerializeField] private float _deathParticlesDuration = 1f;    // duration of death particles
+    [SerializeField] private float _deathParticlesDuration = 5f;    // duration of death particles
     [SerializeField] private int _scoreValue = 0;                   // points awarded on death
 
     private int _maxHealth;                                         // our max health
