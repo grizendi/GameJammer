@@ -7,8 +7,8 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int _currentHealth = 3;                // our current health
-    //[SerializeField] private GameObject _deathParticles;            // gameObject to spawn on death
-    //[SerializeField] private float _deathParticlesDuration = 1f;    // duration of death particles
+    [SerializeField] private GameObject _deathParticles;            // gameObject to spawn on death
+    [SerializeField] private float _deathParticlesDuration = 1f;    // duration of death particles
     [SerializeField] private int _scoreValue = 0;                   // points awarded on death
 
     private int _maxHealth;                                         // our max health
@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     public float CurrentHealthPercentage => (float)_currentHealth / _maxHealth;
 
     // death event
-    //[SerializeField] private UnityEvent DeathEvent;
+    [SerializeField] private UnityEvent DeathEvent;
 
     private void Start()
     {
@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         }
     }
     
-    /*
+    
     // handle death
     private void Death()
     {
@@ -50,12 +50,12 @@ public class Health : MonoBehaviour
         }
 
         // add score on death
-        Score.AddScore(_scoreValue);
+        // Score.AddScore(_scoreValue);
 
         // invoke death event
         DeathEvent.Invoke();
 
         Destroy(gameObject);
-    }*/
+    }
 
 }
