@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1945114551}
   - component: {fileID: 1945114552}
   - component: {fileID: 2809995837396682}
+  - component: {fileID: 8616736602248902176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -88,7 +89,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 2014151898373431095, guid: b768d1803597cb8438a4fffa685c0a4c,
     type: 3}
-  _fireCooldown: 0.02
+  _fireCooldown: 0.05
+--- !u!114 &8616736602248902176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113058552321352129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd6129aa926e77489c5d831d649e7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 3
+  _scoreValue: 0
 --- !u!1001 &2618333553429099931
 PrefabInstance:
   m_ObjectHideFlags: 0

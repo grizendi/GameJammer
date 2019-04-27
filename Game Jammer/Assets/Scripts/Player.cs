@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private float _verticalInput = 0f;
     private bool _fireInput = false;
 
+    private string[] _joystickNames;
 
     private void Start()
     {
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
         _rigidBody.useGravity = false;
 
         _weapon = GetComponent<Weapon>();
+
+        _joystickNames = Input.GetJoystickNames();
     }
 
 
@@ -38,6 +41,14 @@ public class Player : MonoBehaviour
         _verticalInput = Input.GetAxis("Vertical_P" + _playerNumber);
 
         CheckForFireInput();
+
+        Debug.Log(_joystickNames.Length + "joysticks are connected");
+
+        foreach (var item in _joystickNames)
+        {
+            Debug.Log(item);
+        }
+        
 
     }
 
