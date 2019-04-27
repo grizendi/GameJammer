@@ -81,8 +81,28 @@ PrefabInstance:
         type: 3}
       propertyPath: _projectilePrefab
       value: 
-      objectReference: {fileID: 2014151898373431095, guid: 7eed574a60e6847aeb21f1df207d8efe,
+      objectReference: {fileID: 1316645570586432662, guid: fcdaa4622b5edb84099b665923e11c77,
         type: 3}
+    - target: {fileID: 9186084162490599717, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186084162490599715, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186084162490599713, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186084162492864487, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cb1d163e93e54c41a0346b03cf51f2d, type: 2}
     - target: {fileID: 3794301211440914919, guid: 1e123a01d85ee594fb605e10672bde32,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

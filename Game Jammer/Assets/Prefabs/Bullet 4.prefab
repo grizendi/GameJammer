@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 2014151898373431095, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
       propertyPath: m_Name
-      value: Bullet 2
+      value: Bullet 4
       objectReference: {fileID: 0}
     - target: {fileID: 2014151898373431095, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2014151898373431099, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
@@ -75,17 +75,17 @@ PrefabInstance:
     - target: {fileID: 5777217246457600670, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5777217246457600668, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5777217246457600666, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34db9a8c68d05bc41a8f0d2b12eacc3d, type: 3}
