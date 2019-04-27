@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
         _verticalInput = Input.GetAxis("Vertical_P" + _playerNumber);
         _fireInput = Input.GetButtonDown("Fire1_P" + _playerNumber);
 
-        Debug.Log(_horizontalInput);
 
     }
 
