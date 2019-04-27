@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 3794301211999956544}
   - component: {fileID: 3794301211999956551}
   - component: {fileID: 3794301211999956550}
+  - component: {fileID: 2320722814496786580}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -332,3 +333,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+--- !u!136 &2320722814496786580
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3794301211999956549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.80825233
+  m_Height: 3.9361725
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.13729954, z: -0.10936165}
