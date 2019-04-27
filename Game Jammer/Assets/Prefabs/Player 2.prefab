@@ -72,7 +72,23 @@ PrefabInstance:
       propertyPath: _playerNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3794301211999956544, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 2014151898373431095, guid: 7eed574a60e6847aeb21f1df207d8efe,
+        type: 3}
     - target: {fileID: 3794301211440914919, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 644fd3af000dba044b4889601f633b01, type: 2}
+    - target: {fileID: 7218273102135460679, guid: 1e123a01d85ee594fb605e10672bde32,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 644fd3af000dba044b4889601f633b01, type: 2}
+    - target: {fileID: 3178668264282964432, guid: 1e123a01d85ee594fb605e10672bde32,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
