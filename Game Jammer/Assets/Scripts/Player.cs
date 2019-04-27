@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InControl;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -42,12 +43,7 @@ public class Player : MonoBehaviour
 
         CheckForFireInput();
 
-        Debug.Log(_joystickNames.Length + "joysticks are connected");
-
-        foreach (var item in _joystickNames)
-        {
-            Debug.Log(item);
-        }
+       
         
 
     }
