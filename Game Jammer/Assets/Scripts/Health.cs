@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
         // check to see if we're still alive
         if (_currentHealth <= 0)
         {
-            //Death();
+            Death();
         }
     }
     
@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
         }
 
         // add score on death
-        // Score.AddScore(_scoreValue);
+    //    Score.AddScore(_scoreValue);
 
         // invoke death event
         DeathEvent.Invoke();
