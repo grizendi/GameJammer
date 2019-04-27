@@ -103,16 +103,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5113058552321352129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdd6129aa926e77489c5d831d649e7b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7033b1792f9711545945164a34b35812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 3
   _scoreValue: 0
-  DeathEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4193364529482094067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5113058552321352129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8726d5e8d4ff95346b82d4ae1a571102, type: 3}
+  m_Script: {fileID: 11500000, guid: 05e32e3efe3748a4f9ace7c84fb0772e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
