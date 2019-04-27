@@ -2,49 +2,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private int _currentHealth = 3;                // our current health
+    //[SerializeField] private GameObject _deathParticles;            // gameObject to spawn on death
+    //[SerializeField] private float _deathParticlesDuration = 1f;    // duration of death particles
+    [SerializeField] private int _scoreValue = 0;                   // points awarded on death
 
-    [SerializeField] private float _currentHealth = 10f;                        // amount of health the plane has
-    [SerializeField] GameObject _deathParticle;                                 // particle effect attached 
-    [SerializeField] private float _deathparticlesDuration = 1f;                // length of particl effect
-    [SerializeField] private int _scoreValue = 0;                               // points awarded for killing other player
+    private int _maxHealth;                                         // our max health
 
-    private float _maxHealth;                    
-
-    //return health as a percentage 
+    // return the current health percentage
     public float CurrentHealthPercentage => (float)_currentHealth / _maxHealth;
 
-    // Start is called before the first frame update
-    void Start()
+    // death event
+    //[SerializeField] private UnityEvent DeathEvent;
+
+    private void Start()
     {
-        _maxHealth = _currentHealth;  
+        // set max health
+        _maxHealth = _currentHealth;
     }
 
+    // deal damage
+    public void Damage(int amount)
+    {
+        // lower our current health
+        _currentHealth -= amount;
+
+        // check to see if we're still alive
+        if (_currentHealth <= 0)
+        {
+            //Death();
+        }
+    }
     
-    public void Damage(int _amount)
+    /*
+    // handle death
+    private void Death()
     {
-
-        //lower health
-        _currentHealth -= _amount;
-
-        // check to see if plane is not destroyed
-
-        if(_currentHealth <= 0)
+        // spawn death particles, if they exist
+        if (_deathParticles != null)
         {
-            Death();
+            // instantiate and destroy death particles
+            Destroy(Instantiate(_deathParticles, transform.position, transform.rotation), _deathParticlesDuration);
         }
-    }
 
-    public void Death()
-    {
-        
-        if(_deathParticle != null)
-        {
-            Destroy(Instantiate(_deathParticle, transform.position, transform.rotation), _deathparticlesDuration);
-        }
+        // add score on death
+        Score.AddScore(_scoreValue);
+
+        // invoke death event
+        DeathEvent.Invoke();
 
         Destroy(gameObject);
-    }
+    }*/
+
 }
