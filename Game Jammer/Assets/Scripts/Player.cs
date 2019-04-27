@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
         _horizontalInput = inputDevice.Direction.X;
         _verticalInput = inputDevice.Direction.Y;
 
+  
+
         _fireInput = inputDevice.Action1;
         _boostInput = inputDevice.Action2;
 
@@ -121,8 +123,10 @@ public class Player : MonoBehaviour
 
     private void Rotate()
     {
-        if(_canRotate)
+         if(_canRotate)
         transform.Rotate(0f, _horizontalInput * _rotateSpeed, 0f);
+
+      
 
     }
 
