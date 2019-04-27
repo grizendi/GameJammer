@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [Tooltip("Speed of the plane")]
     [SerializeField] private float _forwardSpeed = 10f;
 
+    [Tooltip("Rotate speed")]
     [SerializeField] private float _rotateSpeed = 10f;
 
     private Rigidbody _rigidBody;
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour
         _verticalInput = Input.GetAxis("Vertical_P" + _playerNumber);
         _fireInput = Input.GetButtonDown("Fire1_P" + _playerNumber);
 
+        Debug.Log(_horizontalInput);
+
     }
 
     private void FixedUpdate()
@@ -44,8 +47,9 @@ public class Player : MonoBehaviour
 
     private void Rotate()
     {
-        //Vector3 direction = new Vector3(0f, _horizontalInput, 0f);
         transform.Rotate(0f, _horizontalInput * _rotateSpeed, 0f);
+
+
     }
 
     private void ThrustForward()
